@@ -1,3 +1,4 @@
+%{?_javapackages_macros:%_javapackages_macros}
 Name:          uima-parent-pom
 Version:       8
 Release:       5%{?dist}
