@@ -1,0 +1,18 @@
+--- pom.xml	2014-01-01 19:13:02.000000000 +0100
++++ pom.xml-gil	2014-01-15 16:25:40.339311957 +0100
+@@ -2183,14 +2183,10 @@
+                   <manifestLocation>${project.build.directory}/osgi/META-INF</manifestLocation>
+                   <instructions>
+                     <Import-Package>org.apache.log.*;resolution:=optional</Import-Package>
+-                    <Embed-Dependency>*;scope=compile;</Embed-Dependency>
+-                    <Embed-Directory>lib</Embed-Directory>
+                     <Bundle-RequiredExecutionEnvironment>J2SE-1.5</Bundle-RequiredExecutionEnvironment>
+                     <Eclipse-ExtensibleAPI>true</Eclipse-ExtensibleAPI>
+-                    <Bundle-ClassPath>.,lib/${project.build.finalName}.jar,{maven-dependencies},lib/uimaj-core-${uimaDependencyVersion}.jar</Bundle-ClassPath>
+                     <Include-Resource>
+-                      {maven-resources}, {maven-dependencies},
+-                      lib/uimaj-core-${uimaDependencyVersion}.jar=${settings.localRepository}/org/apache/uima/uimaj-core/${uimaDependencyVersion}/uimaj-core-${uimaDependencyVersion}.jar
++                      {maven-resources}
+                     </Include-Resource>
+                     <Bundle-Version>${parsedVersion.osgiVersion}</Bundle-Version>
+                     <Bundle-SymbolicName>${project.groupId}.${project.artifactId};singleton:=true</Bundle-SymbolicName>
