@@ -4,7 +4,7 @@ Version:       8
 Release:       5%{?dist}
 Summary:       Apache UIMA Parent POM
 License:       ASL 2.0
-URL:           http://uima.apache.org/
+URL:           https://uima.apache.org/
 Source0:       https://github.com/apache/uima-build/archive/parent-pom-%{version}.tar.gz
 # uima-parent-pom package don't include the license file
 # reported @ https://issues.apache.org/jira/browse/UIMA-3575
