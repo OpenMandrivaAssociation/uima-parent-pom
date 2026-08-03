@@ -1,7 +1,7 @@
 %{?_javapackages_macros:%_javapackages_macros}
 Name:          uima-parent-pom
-Version:       8
-Release:       5%{?dist}
+Version:       13
+Release:       1%{?dist}
 Summary:       Apache UIMA Parent POM
 License:       ASL 2.0
 URL:           https://uima.apache.org/
@@ -10,7 +10,7 @@ Source0:       https://github.com/apache/uima-build/archive/parent-pom-%{version
 # reported @ https://issues.apache.org/jira/browse/UIMA-3575
 Source1:       http://www.apache.org/licenses/LICENSE-2.0.txt
 # fix maven-plugin-bundle configuration
-Patch0:        uima-parent-pom-8.patch
+Patch0:        uima-parent-pom-13.patch
 
 BuildRequires: maven-local
 BuildRequires: maven-enforcer-plugin
@@ -34,9 +34,9 @@ supports scalablity, and provides tooling.
 This package provides Parent for Apache UIMA Projects.
 
 %prep
-%setup -q -n uima-build-parent-pom-%{version}
+%setup -q -n uima-build-parent-pom-13
 
-%patch0 -p0
+%patch -P0 -p0
 
 %pom_remove_plugin org.apache.uima:uima-build-helper-maven-plugin
 %pom_remove_plugin com.agilejava.docbkx:docbkx-maven-plugin

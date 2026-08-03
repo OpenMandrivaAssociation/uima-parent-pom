@@ -1,0 +1,18 @@
+--- pom.xml
++++ pom.xml
+@@ -2530,14 +2530,10 @@
+                   <manifestLocation>${project.build.directory}/osgi/META-INF</manifestLocation>
+                   <instructions>
+                     <Import-Package>org.apache.log.*;resolution:=optional</Import-Package>
+-                    <Embed-Dependency>*;scope=compile;</Embed-Dependency>
+-                    <Embed-Directory>lib</Embed-Directory>
+                     <Bundle-RequiredExecutionEnvironment>J2SE-1.6</Bundle-RequiredExecutionEnvironment>
+                     <Eclipse-ExtensibleAPI>true</Eclipse-ExtensibleAPI>
+-                    <Bundle-ClassPath>.,lib/${project.build.finalName}.jar,{maven-dependencies},lib/uimaj-core-${uimaDependencyVersion}.jar</Bundle-ClassPath>
+                     <Include-Resource>
+-                      {maven-resources}, {maven-dependencies},
+-                      lib/uimaj-core-${uimaDependencyVersion}.jar=${settings.localRepository}/org/apache/uima/uimaj-core/${uimaDependencyVersion}/uimaj-core-${uimaDependencyVersion}.jar
++                      {maven-resources}
+                     </Include-Resource>
+                     <Bundle-Version>${parsedVersion.osgiVersion}</Bundle-Version>
+                     <Bundle-SymbolicName>${project.groupId}.${project.artifactId};singleton:=true</Bundle-SymbolicName>
