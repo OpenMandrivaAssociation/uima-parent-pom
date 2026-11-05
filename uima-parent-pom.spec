@@ -7,6 +7,9 @@ URL:           https://uima.apache.org/
 Source0:       https://github.com/apache/uima-parent-pom/archive/refs/tags/parent-pom-%{version}.tar.gz
 
 BuildArch:     noarch
+# Literal, so the first rpmbuild -bs records them before sysjar is installed.
+BuildRequires:	maven
+BuildRequires:	java-current-devel
 BuildSystem:	maven
 BuildOption:	validate
 
