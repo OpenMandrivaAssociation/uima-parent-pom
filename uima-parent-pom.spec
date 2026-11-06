@@ -2,6 +2,7 @@ Name:          uima-parent-pom
 Version:       19
 Release:       1
 Summary:       Apache UIMA Parent POM
+Group:         Development/Java
 License:       ASL 2.0
 URL:           https://uima.apache.org/
 Source0:       https://github.com/apache/uima-parent-pom/archive/refs/tags/parent-pom-%{version}.tar.gz
